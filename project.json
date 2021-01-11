@@ -1,0 +1,66 @@
+{
+  "name": "COR_Download_V.1.0",
+  "description": "This BOT is Developed by \"RPA Team | ANZA Services LLP\" for Automating COR-Download process.\r\n\r\nThis BOT consist 10 BOT inside it :\r\nBOT-1 --> HMLR Login BOT\r\nBOT-2 --> HMLR PDF's Links Extraction BOT\r\nBOT-3 --> HMLR PDF's Download BOT\r\nBOT-4 --> PDF's Data Extraction BOT\r\nBOT-5 --> Non-Reference PDF's Data Extraction BOT \r\nBOT-6 --> Proclaim Data Extraction BOT\r\nBOT-7 --> Data Reconcilation BOT\r\nBOT-8 --> Proclaim Internal Mail BOT\r\nBOT-9 --> Proclaim Client Mail BOT ",
+  "main": "Main.xaml",
+  "dependencies": {
+    "BalaReva.Externals.Activities": "[4.0.3]",
+    "DownloadFileActivities": "[1.0.0]",
+    "InputOrchestrator": "[1.0.5]",
+    "Pdf.Text.Activities": "[1.0.1]",
+    "RenameFile.Activities": "[1.0.4]",
+    "SearchExtractWords": "[1.0.10]",
+    "UiPath.Citrix.Activities": "[1.0.4]",
+    "UiPath.Excel.Activities": "[2.9.0-preview]",
+    "UiPath.GoogleVision.Activities": "[1.1.2]",
+    "UiPath.Mail.Activities": "[1.9.0-preview]",
+    "UiPath.MicrosoftVision.Activities": "[2.2.1]",
+    "UiPath.Persistence.Activities": "[1.1.7]",
+    "UiPath.Python.Activities": "[1.1.6863.33404]",
+    "UiPath.System.Activities": "[20.6.1-preview]",
+    "UiPath.UIAutomation.Activities": "[20.6.0-preview]",
+    "UiPathTeam.PDF.Extensions.Activities": "[2.4.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.6.0.0",
+  "projectVersion": "1.0.64",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "38da94d2-8a0f-4789-8795-9d1d5c59600d",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {}
+}
