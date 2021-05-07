@@ -84,8 +84,15 @@
           "lib/Download File.dll": {}
         }
       },
-      "Extended.Wpf.Toolkit/3.8.1": {
+      "Extended.Wpf.Toolkit/2.8.0": {
         "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Xaml",
+          "WindowsBase"
+        ],
         "compile": {
           "lib/net40/_._": {}
         },
@@ -94,12 +101,10 @@
           "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {},
           "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {},
           "lib/net40/Xceed.Wpf.AvalonDock.dll": {},
+          "lib/net40/Xceed.Wpf.DataGrid.dll": {},
           "lib/net40/Xceed.Wpf.Toolkit.dll": {}
         },
         "resource": {
-          "lib/net40/cs-CZ/Xceed.Wpf.AvalonDock.resources.dll": {
-            "locale": "cs-CZ"
-          },
           "lib/net40/de/Xceed.Wpf.AvalonDock.resources.dll": {
             "locale": "de"
           },
@@ -1697,23 +1702,23 @@
         "lib/Download File.dll"
       ]
     },
-    "Extended.Wpf.Toolkit/3.8.1": {
-      "sha512": "eSD4/BY/xV29KaQi9A65VscpeU3rSrlvadIUepSx5ukeUajW3ph8+n4AlOswRMszbD4DDmrJ4g5O51bCUpiOjw==",
+    "Extended.Wpf.Toolkit/2.8.0": {
+      "sha512": "wKjJl4sDyXTVzgiKTBTw8jT0/3OwpEklQuWGe1Nz2HX0joiBeUzIurY2mnERni+8XHwateRcuks6yk/cuR22fA==",
       "type": "package",
-      "path": "extended.wpf.toolkit/3.8.1",
+      "path": "extended.wpf.toolkit/2.8.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "extended.wpf.toolkit.3.8.1.nupkg.sha512",
+        "extended.wpf.toolkit.2.8.0.nupkg.sha512",
         "extended.wpf.toolkit.nuspec",
+        "lib/net35/WPFToolkit.dll",
+        "lib/net35/Xceed.Wpf.Toolkit.dll",
         "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
         "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
         "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
         "lib/net40/Xceed.Wpf.AvalonDock.dll",
+        "lib/net40/Xceed.Wpf.DataGrid.dll",
         "lib/net40/Xceed.Wpf.Toolkit.dll",
-        "lib/net40/cs-CZ/Xceed.Wpf.AvalonDock.resources.dll",
         "lib/net40/de/Xceed.Wpf.AvalonDock.resources.dll",
         "lib/net40/es/Xceed.Wpf.AvalonDock.resources.dll",
         "lib/net40/fr/Xceed.Wpf.AvalonDock.resources.dll",
@@ -2952,16 +2957,6 @@
   },
   "logs": [
     {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "UiPath.UIAutomation.Activities 20.6.0-preview depends on Extended.Wpf.Toolkit (>= 2.8.0) but Extended.Wpf.Toolkit 2.8.0 was not found. An approximate best match of Extended.Wpf.Toolkit 3.8.1 was resolved.",
-      "libraryId": "Extended.Wpf.Toolkit",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6.1"
-      ]
-    },
-    {
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
@@ -3022,8 +3017,8 @@
     {
       "code": "NU1101",
       "level": "Error",
-      "message": "Unable to find package Google.Apis.Vision.v1. No packages exist with this id in source(s): C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages, Connect, https://gallery.uipath.com/api/v2, https://www.myget.org/F/workflow/, https://www.myget.org/F/workflow/, Local, Official",
-      "libraryId": "Google.Apis.Vision.v1",
+      "message": "Unable to find package iTextSharp. No packages exist with this id in source(s): C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages, Connect, https://gallery.uipath.com/api/v2, https://www.myget.org/F/workflow/, https://www.myget.org/F/workflow/, Local, Official",
+      "libraryId": "iTextSharp",
       "targetGraphs": [
         ".NETFramework,Version=v4.6.1"
       ]
@@ -3031,8 +3026,8 @@
     {
       "code": "NU1101",
       "level": "Error",
-      "message": "Unable to find package iTextSharp. No packages exist with this id in source(s): C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages, Connect, https://gallery.uipath.com/api/v2, https://www.myget.org/F/workflow/, https://www.myget.org/F/workflow/, Local, Official",
-      "libraryId": "iTextSharp",
+      "message": "Unable to find package Google.Apis.Vision.v1. No packages exist with this id in source(s): C:\\Program Files (x86)\\UiPath\\Studio\\.\\Packages, Connect, https://gallery.uipath.com/api/v2, https://www.myget.org/F/workflow/, https://www.myget.org/F/workflow/, Local, Official",
+      "libraryId": "Google.Apis.Vision.v1",
       "targetGraphs": [
         ".NETFramework,Version=v4.6.1"
       ]

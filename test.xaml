@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1487,840" sap2010:WorkflowViewState.IdRef="test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1602,1376" sap2010:WorkflowViewState.IdRef="test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="30">
+    <scg:List x:TypeArguments="x:String" Capacity="43">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -31,10 +31,23 @@
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -59,30 +72,128 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Python</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Citrix.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleVision.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftVision.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="526,300" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="747,1311" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Name="Result_Index" />
-      <Variable x:TypeArguments="x:String" Name="PDF_Name" />
-      <Variable x:TypeArguments="x:String" Name="Temp" />
-      <Variable x:TypeArguments="x:String" Name="Last_Update" />
-      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="Date_Entry" />
-      <Variable x:TypeArguments="x:String" Name="new_date" />
-      <Variable x:TypeArguments="x:String" Name="dd" />
-      <Variable x:TypeArguments="x:String" Name="mm" />
-      <Variable x:TypeArguments="x:String" Name="yyyy" />
-      <Variable x:TypeArguments="s:String[]" Name="yo" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Hi" />
+      <Variable x:TypeArguments="x:Int32" Name="co" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Final_Result" />
+      <Variable x:TypeArguments="x:Int32" Name="Counter" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[&quot;21828ER&quot;.Length =6]" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_1">
-      <If.Else>
-        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;7454ET&quot;.Length]" />
-      </If.Else>
-    </If>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[Final_Result]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="705,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="N:\Scans\Old Scans Folder\Offshore\RPA-Team-BOTS\COR-Download\Final_Result.xlsx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
+    <ui:ForEachRow CurrentIndex="[Counter]" DataTable="[Final_Result]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="705,1092" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row3" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="655,944" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="Proclaim" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="613,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[Counter]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Counter+1]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ReadRange AddHeaders="False" DataTable="[Proclaim]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" Range="[&quot;A&quot;+Counter.ToString+&quot;:&quot;+&quot;I&quot;+Counter.ToString]" SheetName="Sheet1" WorkbookPath="N:\Scans\Old Scans Folder\Offshore\RPA-Team-BOTS\COR-Download\Proclaim_Extracted_Data.xlsx">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ReadRange>
+            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Proclaim]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="613,625" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="563,477" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[row3(1).ToString=&quot;U&quot; or row3(2).ToString=&quot;U&quot; or row3(3).ToString=&quot;U&quot; or row3(4).ToString=&quot;U&quot; or row3(5).ToString=&quot;U&quot; or row3(6).ToString=&quot;U&quot; or row3(7).ToString=&quot;U&quot; or row3(8).ToString=&quot;U&quot;]" sap:VirtualizedContainerService.HintSize="521,385" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Dear Team,&quot;+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;&quot;This Case Reference Consist some Unmatch Data :&quot;+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;&quot;Reference Number : &quot;+row(0).ToString+Environment.NewLine+&#xD;&#xA;&quot;Title Number : &quot;+row(1).ToString+Environment.NewLine+&#xD;&#xA;&quot;Property Address : &quot;+row(2).ToString+Environment.NewLine+&#xD;&#xA;&quot;Pin Code : &quot;+row(3).ToString+Environment.NewLine+&#xD;&#xA;&quot;First Name 1 : &quot;+row(4).ToString+Environment.NewLine+&#xD;&#xA;&quot;Last Name 1 : &quot;+row(5).ToString+Environment.NewLine+&#xD;&#xA;&quot;First Name 2 : &quot;+row(6).ToString+Environment.NewLine+&#xD;&#xA;&quot;Last Name 2 : &quot;+row(7).ToString+Environment.NewLine+&#xD;&#xA;&quot;Bank Name : &quot;+row(8).ToString+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;&quot;Kindly Find the attachment of Official Copy File&quot;+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;&quot;Regards,&quot;+&#xD;&#xA;Environment.NewLine+&#xD;&#xA;&quot;COR Bot | RPA Team | Anza Services LLP&quot;]" DisplayName="Send SMTP Mail Message" Email="bilalzafri@anzaservicesllp.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="@Sonumotihai786" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="[&quot;COR BOT : Unmatch Data Present in &quot;+row(0).ToString+&quot; Case Reference&quot;]" To="hk@avrillo.co.uk">
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                <InArgument x:TypeArguments="x:String">
+                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;N:\Scans\Old Scans Folder\Offshore\RPA-Team-BOTS\COR-Download\All_PDF\&quot;+row(0).ToString+&quot; O.pdf&quot;" />
+                                </InArgument>
+                              </scg:List>
+                            </ui:SendMail.Files>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendMail>
+                        </Sequence>
+                      </If.Then>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
   </Sequence>
 </Activity>
